@@ -15,7 +15,7 @@ st.success(f"✅ Key found: {api_key[:4]}...{api_key[-4:]}")
 if st.button("Test API"):
     try:
         genai.configure(api_key=api_key)
-        model = genai.GenerativeModel("gemini-1.5-flash")
+        model = genai.GenerativeModel("gemini-pro")
         response = model.generate_content("Say hello in 5 words")
         
         st.success("✅ API WORKS!")
